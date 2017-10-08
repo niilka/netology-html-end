@@ -1,0 +1,92 @@
+.ic {
+    font-size: 10px;
+}
+
+.ic:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("svg.svg");
+    background-repeat: no-repeat;
+    background-size: 1.8062999999999998em 15.4em;
+}
+
+.no-svg .ic:before {
+    background-image: url("../svg.png");
+}
+
+
+
+  .ic.i-sp-blog:before {
+      background-position: 0em 0em;
+      width: 1.8062999999999998em;
+      height: 1.8280999999999998em;
+  }
+
+
+
+
+  .ic.i-sp-blog-white:before {
+      background-position: 0em -1.9em;
+      width: 1.8062999999999998em;
+      height: 1.8280999999999998em;
+  }
+
+
+
+
+  .ic.i-sp-jobs:before {
+      background-position: 0em -3.8em;
+      width: 1.8062em;
+      height: 2.1031em;
+  }
+
+
+
+
+  .ic.i-sp-jobs-white:before {
+      background-position: 0em -6em;
+      width: 1.8062em;
+      height: 2.1031em;
+  }
+
+
+
+
+  .ic.i-sp-language:before {
+      background-position: 0em -8.2em;
+      width: 1.8062em;
+      height: 1.8280999999999998em;
+  }
+
+
+
+
+  .ic.i-sp-language-white:before {
+      background-position: 0em -10.1em;
+      width: 1.8062em;
+      height: 1.8280999999999998em;
+  }
+
+
+
+
+  .ic.i-sp-support:before {
+      background-position: 0em -12em;
+      width: 1.7155999999999998em;
+      height: 1.6469em;
+  }
+
+
+
+
+  .ic.i-sp-support-white:before {
+      background-position: 0em -13.7em;
+      width: 1.7155999999999998em;
+      height: 1.6469em;
+  }
+
+
+
+
+

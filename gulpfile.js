@@ -14,7 +14,11 @@ var
 	notify = require("gulp-notify"),
 	pug = require("gulp-pug"),
 	rimraf = require('rimraf'),
-	spritesmith = require('gulp.spritesmith');
+	spritesmith = require('gulp.spritesmith'),
+	svgSprite = require('gulp-svg-sprites'),
+	svgmin = require('gulp-svgmin'),
+	cheerio = require('gulp-cheerio'),
+	replace = require('gulp-replace');
 
 gulp.task('browser-sync', function () {
 	browserSync({
@@ -72,8 +76,8 @@ gulp.task('build', ['removedist', 'imagemin', 'pug', 'sass', 'js'], function () 
 
 gulp.task('js', function () {
 	return gulp.src([
-		'app/js/common.js',
-	])
+			'app/js/common.js',
+		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('app/js'))

@@ -1,3 +1,5 @@
+include _pug-mixins/_svg-sprites.pug
+
 doctype html
 html(lang='ru')
   head
@@ -10,4 +12,77 @@ html(lang='ru')
       body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }
   body
     link(rel='stylesheet', href='css/main.min.css')
+
+    header.site-header
+      .site-header--top-line   
+        .top-line--content-wrapper.cnt
+          .content-wrapper--left-column-links.col
+            ul
+              li
+                a(href="#") Blog
+              li
+                a(href="#") Jobs
+              li
+                a(href="#") Support
+              li
+                a(href="#") Arabic          
+          .content-wrapper--right-column-links.col
+            ul
+              li
+                a(href="#")
+              li
+                a(href="#")
+              li
+                a(href="#")
+              li
+                a(href="#")
+      .site-header--middle-line
+        .middle-line--content-wrapper.cnt
+          .content-wrapper--logotype-wrapper.col
+            img.logotype-wrapper--logotype(src="img/logo.png")
+          .content-wrapper--contacts-links.col
+            ul
+              li
+                a(href="#")
+              li
+                a(href="#")
+              li
+                a(href="#")
+      .site-header--bottom-line
+        .bottom-line--content-wrapper.cnt
+          nav.content-wrapper--site-navigation
+            ul
+              li
+                a(href="#") Home
+              li
+                a(href="#") What about ISAMA
+              li
+                a(href="#") What we do ?
+              li
+                a(href="#") Our Projects
+              li
+                a(href="#") Excellent Team
+              li
+                a(href="#") Contact
+          .content-wrapper--search-box
+            input.search-box--search-field(type="text", placeholder="Type your search words")
+      .site-header--hero-wrapper
+        .hero-wrapper--hero-content.cnt
+          .hero-content--title-wrapper
+            h1.title-wrapper--main-title Let’s draw some arts
+              span.title-wrapper--amp &amp
+            p.title-wrapper--title-description make your business much better
+            
+          .hero-content--images-slider
+            .images-slider--image-wrapper
+              img.image-wrapper--slider-image(src="img/slider/image-1.jpg", alt="office")
+              .image-wrapper--like-wrapper
+                a.like-wrapper--like-button(href="#") Like
+
+            .images-slider--image-wrapper
+              img.image-wrapper--slider-image(src="img/slider/image-2.jpg", alt="phone")
+              .image-wrapper--like-wrapper
+                a.like-wrapper--like-button(href="#") Like
+            a.images-slider--slider-arrow(href="#")
+              
     script(src='js/scripts.min.js')
