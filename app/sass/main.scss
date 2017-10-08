@@ -3,6 +3,7 @@
 @import "base";
 @import "vars";
 @import "reset";
+@import "png-sprite";
 @import "_mixins/svg-icons";
 .site-header {
   &--top-line {
@@ -366,6 +367,199 @@
           background-image: url("../img/icons/svg/arrow.svg");
           background-repeat: no-repeat;
           background-position: center;
+        }
+      }
+    }
+  }
+}
+
+.about-section {
+  @include icon(divide);
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  background-position: bottom center;
+  padding-bottom: 106px;
+  &--articles-wrapper {
+    padding-top: 26px;
+    h3 {
+      font-size: 26px;
+      font-weight: 700;
+      color: $font-color;
+      padding-bottom: 13px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      color: $font-color;
+      display: inline-block;
+      width: 386px;
+      line-height: 1.5;
+      word-break: break-all;
+      word-spacing: 4px;
+    }
+    .article-wrapper--left-column {
+      text-align: left;
+      position: relative;
+      .left-column--background-icon {
+        width: 106px;
+        height: 113px;
+        position: absolute;
+        top: 4px;
+        left: -2px;
+        @include sprite($lamp)
+      }
+      .left-column--article-content {
+        padding-left: 135px;
+        padding-top: 13px;
+      }
+    }
+    .article-wrapper--right-column {
+      position: relative;
+      .right-column--background-icon {
+        width: 106px;
+        height: 113px;
+        position: absolute;
+        top: 2px;
+        left: 62px;
+        @include sprite($tree)
+      }
+      .right-column--article-content {
+        padding-left: 191px;
+        padding-top: 13px;
+      }
+    }
+  }
+}
+
+.features-section {
+  .features-section--content-wrapper {
+    text-align: center;
+    padding-top: 91px;
+    .content-wrapper--title-wrapper {
+      display: inline-block;
+      padding-left: 161px;
+      position: relative;
+      .title-wrapper--background-icon {
+        @include sprite($arrows);
+        position: absolute;
+        left: -3px;
+        top: -22px;
+      }
+      .title-wrapper--main-title {
+        text-align: left;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1em;
+        color: $font-color;
+        margin: 0;
+      }
+      .title-wrapper-title-description {
+        text-align: left;
+        font-size: 17px;
+        font-weight: 300;
+        padding-top: 6px;
+      }
+    }
+  }
+  .content-wrapper--features-grid {
+    padding-top: 99px;
+    .feature-block--backgroind-icon {
+      position: absolute;
+      top: 0;
+    }
+    .feature-block--title-wrapper {
+      text-align: left;
+      .title-wrapper--main-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $font-color;
+        padding-bottom: 10px;
+      }
+      .title-wrapper--title-description {
+        display: inline-block;
+        width: 387px;
+        font-size: 16px;
+        font-weight: 300;
+        word-break: break-all;
+      }
+    }
+    .features-grid--features-left {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -6px;
+        right: 15px;
+        width: 1px;
+        height: 596px;
+        background-color: #eaeced;
+      }
+      .features-left--feature-block {
+        position: relative;
+        &:nth-child(1) {
+          .feature-block--backgroind-icon {
+            @include sprite($feature-1);
+            top: 7px;
+            left: -2px;
+          }
+        }
+        &:nth-child(2) {
+          margin-top: 87px;
+          .feature-block--backgroind-icon {
+            @include sprite($feature-2);
+            top: 7px;
+            left: -2px;
+          }
+        }
+        &:nth-child(3) {
+          margin-top: 81px;
+          .feature-block--backgroind-icon {
+            @include sprite($feature-3);
+            top: 7px;
+            left: -2px;
+          }
+        }
+        .feature-block--title-wrapper {
+          padding-left: 116px;
+          .title-wrapper--main-title {}
+          .title-wrapper--title-description {}
+        }
+      }
+    }
+    .features-grid--features-right {
+      .features-right--feature-block {
+        position: relative;
+        &:nth-child(1) {
+          .feature-block--backgroind-icon {
+            @include sprite($feature-4);
+            top: 7px;
+            left: 96px;
+          }
+        }
+        &:nth-child(2) {
+          margin-top: 87px;
+          .feature-block--backgroind-icon {
+            @include sprite($feature-5);
+            top: 2px;
+            left: 80px;
+          }
+        }
+        &:nth-child(3) {
+          margin-top: 81px;
+          .feature-block--backgroind-icon {
+            @include sprite($feature-6);
+            top: 6px;
+            left: 96px;
+          }
+        }
+        .feature-block--title-wrapper {
+          padding-left: 193px;
+          .title-wrapper--main-title {}
+          .title-wrapper--title-description {}
         }
       }
     }

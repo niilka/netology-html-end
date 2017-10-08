@@ -30,13 +30,13 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('sprites', function () {
-	var spriteData = gulp.src('app/img/icons/*.png').pipe(spritesmith({
+	var spriteData = gulp.src('app/img/icons/png/*.png').pipe(spritesmith({
 		imgName: 'sprite.png',
-		cssName: '_sprite.sass',
+		cssName: '_sprite.scss',
 		algorithm: 'left-right',
 		padding: 80
 	}));
-	return spriteData.pipe(gulp.dest('app/img/icons/png-sprite'));
+	return spriteData.pipe(gulp.dest('app/img/icons/png/png-sprite'));
 });
 
 gulp.task('imagemin', function () {
