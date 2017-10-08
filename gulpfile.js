@@ -14,7 +14,6 @@ var
 	notify = require("gulp-notify"),
 	pug = require("gulp-pug"),
 	rimraf = require('rimraf'),
-	ngrok = require('ngrok'),
 	spritesmith = require('gulp.spritesmith');
 
 gulp.task('browser-sync', function () {
