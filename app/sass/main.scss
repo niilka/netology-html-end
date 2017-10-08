@@ -258,8 +258,7 @@
         height: 86px;
         padding-left: 40px;
         display: inline-block;
-        background-image: url("../img/icons/png/search.png");
-        background-repeat: no-repeat;
+        @include icon(search);
         background-position: 0px 30px;
         .search-box--search-field {
           border: none;

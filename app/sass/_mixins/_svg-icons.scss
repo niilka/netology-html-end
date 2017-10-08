@@ -1,4 +1,4 @@
 @mixin icon($icon) {
-  background-image: url("../../img/icons/svg/#{$icon}.svg");
+  background-image: url("../img/icons/svg/#{$icon}.svg");
   background-repeat: no-repeat;
 }
