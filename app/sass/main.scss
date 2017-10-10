@@ -241,7 +241,7 @@
                 display: block;
                 margin: 0 auto;
                 position: absolute;
-                bottom: 2px;
+                bottom: 1px;
                 width: 10px;
                 top: 0;
                 left: 0;
@@ -380,7 +380,7 @@
     clear: both;
   }
   background-position: bottom center;
-  padding-bottom: 106px;
+  padding-bottom: 81px;
   &--articles-wrapper {
     padding-top: 26px;
     h3 {
@@ -434,7 +434,7 @@
 }
 
 .features-section {
-  padding-bottom: 62px;
+  padding-bottom: 69px;
   .features-section--content-wrapper {
     text-align: center;
     padding-top: 91px;
@@ -484,6 +484,7 @@
         font-size: 16px;
         font-weight: 300;
         word-break: break-all;
+        line-height: 1.5;
       }
     }
     .features-grid--features-left {
@@ -511,15 +512,15 @@
           margin-top: 87px;
           .feature-block--backgroind-icon {
             @include sprite($feature-2);
-            top: 7px;
+            top: 8px;
             left: -2px;
           }
         }
         &:nth-child(3) {
-          margin-top: 81px;
+          margin-top: 88px;
           .feature-block--backgroind-icon {
             @include sprite($feature-3);
-            top: 7px;
+            top: 8px;
             left: -2px;
           }
         }
@@ -544,15 +545,15 @@
           margin-top: 87px;
           .feature-block--backgroind-icon {
             @include sprite($feature-5);
-            top: 2px;
+            top: 5px;
             left: 80px;
           }
         }
         &:nth-child(3) {
-          margin-top: 81px;
+          margin-top: 88px;
           .feature-block--backgroind-icon {
             @include sprite($feature-6);
-            top: 6px;
+            top: 7px;
             left: 96px;
           }
         }
@@ -570,6 +571,7 @@
   padding-top: 73px;
   overflow: hidden;
   position: relative;
+  padding-bottom: 69px;
   &::before,
   &::after {
     background-color: #efefef;
@@ -762,8 +764,9 @@
   .site-footer--footer-content-wrapper {
     .footer-content-wrapper--footer-middle-line {
       padding-top: 77px;
+      margin-bottom: 56px;
       .footer-middle-line--footer-buttons {
-        margin-left: -4px;
+        margin-left: -3px;
         ul {
           list-style-type: none;
           height: 64px;
@@ -791,6 +794,7 @@
               }
             }
             &:nth-child(4) {
+              padding-right: 17px;
               a {
                 @include icon(gplus-g);
               }
@@ -814,7 +818,7 @@
           @include icon(profile);
           background-position: 20px center;
           margin-top: 8px;
-          margin-left: -11px;
+          margin-left: -13px;
           .field-wrapper--email-field {
             font-size: 14px;
             background-color: transparent;
@@ -835,7 +839,7 @@
             border-radius: 7px;
             float: right;
             padding: 10px 24px;
-            margin-right: 8px;
+            margin-right: 9px;
             display: inline-block;
             margin-top: 11px;
           }
@@ -843,7 +847,6 @@
       }
     }
     .footer-content-wrapper--footer-bottom-line {
-      margin-top: 62px;
       .footer-bottom-line--copyright-wrapper {
         .copyright-wrapper--copyright {
           font-size: 13px;
@@ -852,9 +855,11 @@
         }
       }
       .footer-bottom-line--site-map {
+        display: inline-block;
         text-align: right;
         font-weight: 300;
-        padding-right: 4px;
+        padding-right: 3px;
+        padding-top: 4px;
         ul {
           list-style-type: none;
           font-size: 0;
@@ -862,7 +867,7 @@
             display: inline-block;
             position: relative;
             &:not(:last-child) {
-              margin-right: 17px;
+              margin-right: 14px;
               &::after {
                 content: "";
                 position: absolute;
@@ -872,6 +877,26 @@
                 right: -13px;
                 background-color: $font-color;
                 border-radius: 3px;
+              }
+            }
+            &:nth-child(5) {
+              a {
+                padding-left: 6px;
+              }
+            }
+            &:nth-child(4) {
+              a {
+                padding-left: 7px;
+              }
+            }
+            &:nth-child(3) {
+              a {
+                padding-left: 7px;
+              }
+            }
+            &:nth-child(2) {
+              a {
+                padding-left: 6px;
               }
             }
             a {
