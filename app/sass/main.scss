@@ -575,15 +575,11 @@
 }
 
 .about-section {
-  background-image: url("../img/icons/svg/divide.svg");
-  background-repeat: no-repeat;
   &::after {
     content: "";
     display: block;
     clear: both;
   }
-  background-position: bottom center;
-  padding-bottom: 106px;
   &--articles-wrapper {
     padding-top: 26px;
     h3 {
@@ -638,7 +634,10 @@
 
 .features-section {
   padding-bottom: 73px;
-  padding-top: 92px;
+  padding-top: 174px;
+  background-image: url("../img/icons/svg/divide.svg");
+  background-repeat: no-repeat;
+  background-position: center 60px;
   .features-section--content-wrapper {
     text-align: center;
     .content-wrapper--title-wrapper {
