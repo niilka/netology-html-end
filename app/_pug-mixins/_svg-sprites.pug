@@ -1,4 +1,16 @@
-mixin icon(name,mod)
-	- mod = mod || ''
-	svg(class="icon icon-" + name + ' ' + mod)
-		use(xlink:href="#icon-" + name)
+//- SVG Icon to be used with SVG sprite
+    Usage: +svg-icon("twitter", 32)
+    CSS: .icon
+    
+    name   - [string] name of icon without prefix
+    size   - [integer] icon size in px
+    sprite - [string] path to SVG sprite
+    prefix - [string] prefix of icon name
+mixin svg-icon(name, size, fill)
+    - var size = size || 24;
+    - var sprite = "img/icons/svg/sprite/sprite.svg"
+    - var prefix = ""
+    
+    span.icon(aria-hidden="true")&attributes(attributes)
+        svg(viewBox='0 0 ' + size + ' ' + size width=size height=size fill=fill)
+            use(xlink:href='img/icons/svg/sprite/sprite.svg#' + name)

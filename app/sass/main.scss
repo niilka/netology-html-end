@@ -29,30 +29,46 @@
             &:hover {
               &:nth-child(1) {
                 background-color: $accent-color;
-                @include icon(blog-h);
                 a {
                   color: #ffffff;
+                  .icon {
+                    svg {
+                      fill: #fff;
+                    }
+                  }
                 }
               }
               &:nth-child(2) {
                 background-color: $accent-color;
-                @include icon(jobs-h);
                 a {
                   color: #ffffff;
+                  .icon {
+                    svg {
+                      fill: #fff;
+                    }
+                  }
                 }
               }
               &:nth-child(3) {
                 background-color: $accent-color;
-                @include icon(support-h);
                 a {
                   color: #ffffff;
+                  .icon {
+                    svg {
+                      fill: #fff;
+                    }
+                  }
                 }
               }
               &:nth-child(4) {
                 background-color: $accent-color;
-                @include icon(language-h);
                 a {
                   color: #ffffff;
+                  .icon {
+                    svg {
+                      fill: #fff;
+                    }
+                  }
                 }
               }
             }
@@ -63,28 +79,39 @@
               a {
                 padding-left: 47px;
                 padding-right: 26px;
-                @include icon(blog);
+                .icon {
+                  left: 6px;
+                }
               }
             }
             &:nth-child(2) {
               a {
                 padding-left: 47px;
-                padding-right: 27px;
-                @include icon(jobs);
+                padding-right: 27px; //@include icon(jobs);
+                .icon {
+                  left: 6px;
+                  top: 6px;
+                }
               }
             }
             &:nth-child(3) {
               a {
                 padding-left: 37px;
                 padding-right: 13px;
-                @include icon(support)
+                .icon {
+                  left: 7px;
+                  top: 7px;
+                }
               }
             }
             &:nth-child(4) {
               a {
                 padding-left: 43px;
                 padding-right: 17px;
-                @include icon(language)
+                .icon {
+                  left: 8px;
+                  top: 7px;
+                }
               }
             }
             a {
@@ -95,6 +122,10 @@
               display: inline-block;
               padding: 6.7px 0;
               background-position: 8px;
+              position: relative;
+              .icon {
+                position: absolute;
+              }
             }
           }
         }
@@ -111,49 +142,51 @@
           height: 63px;
           overflow: hidden;
           padding: 0 20px;
+          position: relative;
+          &:hover {
+            a {
+              .icon {
+                svg {
+                  fill: $glith-icon
+                }
+              }
+            }
+          }
           &:not(last-child) {
             padding-right: 19px
           }
           &:last-child {
-            border-right: 1px solid #dee0e6
+            border-right: 1px solid #dee0e6;
           }
           &:nth-child(1) {
             a {
-              @include icon(facebook)
-            }
-            &:hover {
-              a {
-                @include icon(facebook-g)
+              .icon {
+                top: 21px;
+                left: 21px;
               }
             }
           }
           &:nth-child(2) {
             a {
-              @include icon(twitter)
-            }
-            &:hover {
-              a {
-                @include icon(twitter-g)
+              .icon {
+                top: 19px;
+                left: 20px;
               }
             }
           }
           &:nth-child(3) {
             a {
-              @include icon(instagram)
-            }
-            &:hover {
-              a {
-                @include icon(instagram-g)
+              .icon {
+                top: 21px;
+                left: 21px;
               }
             }
           }
           &:nth-child(4) {
             a {
-              @include icon(gplus)
-            }
-            &:hover {
-              a {
-                @include icon(gplus-g)
+              .icon {
+                top: 19px;
+                left: 19px;
               }
             }
           }
@@ -165,6 +198,11 @@
             font-size: 12px;
             text-decoration: none;
             transition: background 0.2s ease-out;
+            .icon {
+              position: absolute;
+              left: 22px;
+              top: 21px;
+            }
           }
         }
       }
@@ -189,6 +227,15 @@
             display: inline-block;
             padding-left: 40px;
             position: relative;
+            &:hover {
+              a {
+                .icon {
+                  svg {
+                    fill: $accent-color;
+                  }
+                }
+              }
+            }
             &:not(:last-child)::after {
               position: absolute;
               top: 6px;
@@ -200,7 +247,14 @@
             }
             &:nth-child(1) {
               a {
-                @include icon(phone);
+                .icon {
+                  right: 3px;
+                  top: 4px;
+                  svg {
+                    fill-rule: "evenodd";
+                    stroke: "#6d6e71"
+                  }
+                }
               }
               &:hover {
                 a {
@@ -214,7 +268,10 @@
                 right: -18px;
               }
               a {
-                @include icon(nav);
+                .icon {
+                  right: 2px;
+                  top: 1px;
+                }
               }
               &:hover {
                 a {
@@ -224,7 +281,10 @@
             }
             &:nth-child(3) {
               a {
-                @include icon(mail);
+                .icon {
+                  right: 1px;
+                  top: 3px;
+                }
               }
               &:hover {
                 a {
@@ -239,6 +299,9 @@
               width: 30px;
               height: 35px;
               transition: background ease-out 0.2s;
+              .icon {
+                position: absolute;
+              }
             }
           }
         }
@@ -334,8 +397,12 @@
         height: 86px;
         padding-left: 40px;
         display: inline-block;
-        @include icon(search);
-        background-position: 0px 30px;
+        position: relative;
+        .icon {
+          position: absolute;
+          left: 0;
+          top: 30px;
+        }
         .search-box--search-field {
           border: none;
           outline: none;
@@ -407,7 +474,9 @@
                 background-color: darken(rgba(138, 202, 81, 0.9), 10%);
               }
               .like-wrapper--like-button {
-                @include icon(like-g)
+                .like-button--like-text {
+                  color: #fff;
+                }
               }
             }
           }
@@ -418,7 +487,9 @@
                 background-color: darken(rgba(254, 235, 117, 0.9), 10%);
               }
               .like-wrapper--like-button {
-                @include icon(like-b)
+                .like-button--like-text {
+                  color: #cc9800;
+                }
               }
             }
           }
@@ -434,13 +505,18 @@
               display: inline-block;
               width: 100%;
               line-height: 65px;
-              background-repeat: no-repeat;
-              background-position: 126px 18px;
               text-decoration: none;
-              color: #ffffff;
-              padding-left: 44px;
-              font-size: 14px;
-              font-weight: 600;
+              position: relative;
+              .icon {
+                position: absolute;
+                left: 126px;
+                top: 10px;
+              }
+              .like-button--like-text {
+                padding-left: 44px;
+                font-size: 14px;
+                font-weight: 600;
+              }
             }
           }
         }
@@ -449,10 +525,13 @@
           height: 241px;
           float: left;
           background-color: #f4f4f4;
-          background-image: url("../img/icons/svg/arrow.svg");
-          background-repeat: no-repeat;
-          background-position: center;
+          position: relative;
           transition: background 0.2s ease-out;
+          .icon {
+            position: absolute;
+            top: 42%;
+            left: 35px;
+          }
           &:hover {
             background-color: darken(#f4f4f4, 3%);
           }
@@ -843,9 +922,12 @@
                 display: inline-block;
                 width: 139px;
                 height: 59px;
-                @include icon(share);
-                background-position: 61px;
-                transition: 0.2s background ease-out;
+                position: relative;
+                .icon {
+                  position: absolute;
+                  top: 18px;
+                  left: 62px;
+                }
                 &::after {
                   content: "";
                   position: absolute;
@@ -856,18 +938,29 @@
                   background-color: #efefef;
                 }
                 &:hover {
-                  @include icon(share-h);
+                  .icon {
+                    svg {
+                      fill: darken(#c7c9ce, 5%);
+                    }
+                  }
                 }
               }
               .buttons-wrapper--more-button {
                 display: inline-block;
                 width: 139px;
                 height: 59px;
-                transition: 0.2s background ease-out;
-                @include icon(more);
-                background-position: 53px;
+                position: relative;
+                .icon {
+                  position: absolute;
+                  top: 17px;
+                  right: 63px;
+                }
                 &:hover {
-                  @include icon(more-h);
+                  .icon {
+                    svg {
+                      fill: darken(#c7c9ce, 5%);
+                    }
+                  }
                 }
               }
             }
@@ -897,45 +990,46 @@
             height: 100%;
             padding-left: 19px;
             padding-right: 19px;
+            &:hover {
+              a {
+                .icon {
+                  svg {
+                    fill: lighten(#414344, 10%);
+                  }
+                }
+              }
+            }
             &:nth-child(1) {
               border-left: 1px solid #3c3e3f;
               a {
-                @include icon(facebook-g);
-              }
-              &:hover {
-                a {
-                  @include icon(facebook-g-h);
+                .icon {
+                  top: 21px;
+                  left: 2px;
                 }
               }
             }
             &:nth-child(2) {
               a {
-                @include icon(twitter-g);
-              }
-              &:hover {
-                a {
-                  @include icon(twitter-g-h);
+                .icon {
+                  top: 20px;
+                  left: 1px;
                 }
               }
             }
             &:nth-child(3) {
               a {
-                @include icon(instagram-g);
-              }
-              &:hover {
-                a {
-                  @include icon(instagram-g-h);
+                .icon {
+                  top: 21px;
+                  left: 2px;
                 }
               }
             }
             &:nth-child(4) {
               padding-right: 17px;
               a {
-                @include icon(gplus-g);
-              }
-              &:hover {
-                a {
-                  @include icon(gplus-g-h);
+                .icon {
+                  top: 20px;
+                  left: 1px;
                 }
               }
             }
@@ -947,6 +1041,10 @@
               text-decoration: none;
               display: inline-block;
               transition: 0.2s background ease-out;
+              position: relative;
+              .icon {
+                position: absolute;
+              }
             }
           }
         }
@@ -955,11 +1053,16 @@
         .sub-bar--field-wrapper {
           background-color: #393b3c;
           height: 66px;
-          border-radius: 6px;
-          @include icon(profile);
+          border-radius: 10px;
           background-position: 20px center;
           margin-top: 8px;
           margin-left: -13px;
+          position: relative;
+          .icon {
+            position: absolute;
+            top: 17px;
+            left: 21px;
+          }
           .field-wrapper--email-field {
             font-size: 14px;
             background-color: transparent;
@@ -968,7 +1071,8 @@
             font-weight: 700;
             height: 100%;
             color: $font-color;
-            padding-left: 83px;
+            padding-left: 84px;
+            letter-spacing: 0.2px;
             width: 70%;
             &:focus {
               outline: 1px solid #646769;
@@ -1067,7 +1171,13 @@
   }
 }
 
-.test {
+svg.icon {
+  fill: red;
+  width: 10px;
+  height: 10px;
+}
+
+svg[xmlns] {
   display: block;
 }
 

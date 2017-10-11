@@ -15,11 +15,9 @@ var
 	pug = require("gulp-pug"),
 	rimraf = require('rimraf'),
 	spritesmith = require('gulp.spritesmith'),
-	svgSprite = require('gulp-svg-sprites'),
+	svgstore = require('gulp-svgstore'),
 	svgmin = require('gulp-svgmin'),
-	cheerio = require('gulp-cheerio'),
-	replace = require('gulp-replace');
-
+	cheerio = require('gulp-cheerio');
 gulp.task('browser-sync', function () {
 	browserSync({
 		server: {
@@ -39,6 +37,16 @@ gulp.task('sprites', function () {
 	return spriteData.pipe(gulp.dest('app/img/icons/png/png-sprite'));
 });
 
+gulp.task('svg-sprites', function () {
+	return gulp
+		.src('app/img/icons/svg/*.svg')
+		.pipe(svgstore())
+		.pipe(rename({
+			basename: 'sprite'
+		}))
+
+		.pipe(gulp.dest('app/img/icons/svg/sprite'))
+});
 gulp.task('imagemin', function () {
 	return gulp.src('app/img/**/*')
 		.pipe(cache(imagemin()))
