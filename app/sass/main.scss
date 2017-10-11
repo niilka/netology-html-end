@@ -22,7 +22,6 @@
           font-size: 0;
           li {
             display: inline-block;
-            padding: 6.7px 0;
             background-color: #ffffff;
             background-position: 8px;
             transition: background ease-out 0.2s;
@@ -61,30 +60,41 @@
               margin-left: 5px;
             }
             &:nth-child(1) {
-              padding-left: 47px;
-              padding-right: 26px;
-              @include icon(blog);
+              a {
+                padding-left: 47px;
+                padding-right: 26px;
+                @include icon(blog);
+              }
             }
             &:nth-child(2) {
-              padding-left: 47px;
-              padding-right: 27px;
-              @include icon(jobs)
+              a {
+                padding-left: 47px;
+                padding-right: 27px;
+                @include icon(jobs);
+              }
             }
             &:nth-child(3) {
-              padding-left: 37px;
-              padding-right: 13px;
-              @include icon(support)
+              a {
+                padding-left: 37px;
+                padding-right: 13px;
+                @include icon(support)
+              }
             }
             &:nth-child(4) {
-              padding-left: 43px;
-              padding-right: 17px;
-              @include icon(language)
+              a {
+                padding-left: 43px;
+                padding-right: 17px;
+                @include icon(language)
+              }
             }
             a {
               text-decoration: none;
               color: $font-color;
               font-weight: 700;
               font-size: 12px;
+              display: inline-block;
+              padding: 6.7px 0;
+              background-position: 8px;
             }
           }
         }
@@ -334,6 +344,9 @@
           font-weight: 300;
           margin-right: 5px;
           background-color: transparent;
+          &:focus {
+            background-color: darken(#fff, 2%);
+          }
         }
       }
     }
@@ -475,6 +488,7 @@
       line-height: 1.5;
       word-break: break-all;
       word-spacing: 4px;
+      text-align: justify;
     }
     .article-wrapper--left-column {
       text-align: left;
@@ -562,6 +576,7 @@
         font-weight: 300;
         word-break: break-all;
         line-height: 1.5;
+        text-align: justify;
       }
     }
     .features-grid--features-left {
@@ -727,30 +742,42 @@
               }
             }
             &:nth-child(1) {
-              padding: 7px 49px;
               margin-left: 12px;
               margin-right: 11px;
+              a {
+                padding: 0px 49px;
+              }
             }
             &:nth-child(2) {
-              padding: 7px 31px;
               margin-right: 10px;
+              a {
+                padding: 0px 31px;
+              }
             }
             &:nth-child(3) {
-              padding: 7px 41px;
               margin-right: 9px;
+              a {
+                padding: 0px 41px;
+              }
             }
             &:nth-child(4) {
-              padding: 7px 20px;
               margin-right: 10px;
+              a {
+                padding: 0px 20px;
+              }
             }
             &:nth-child(5) {
-              padding: 7px 27px;
+              a {
+                padding: 0px 27px;
+              }
             }
             a {
               text-decoration: none;
               font-size: 15px;
               font-weight: 700;
               color: #bbbbbb;
+              display: inline-block;
+              line-height: 40px;
             }
           }
         }
@@ -943,6 +970,9 @@
             color: $font-color;
             padding-left: 83px;
             width: 70%;
+            &:focus {
+              outline: 1px solid #646769;
+            }
           }
           .field-wrapper--join-button {
             color: $font-color;
@@ -951,8 +981,9 @@
             font-size: 14px;
             background-color: #494c4d;
             border-radius: 7px;
+            border: none;
             float: right;
-            padding: 10px 24px;
+            padding: 14px 24px;
             margin-right: 9px;
             display: inline-block;
             margin-top: 11px;
