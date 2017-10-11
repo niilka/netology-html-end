@@ -4,11 +4,10 @@
 @import "vars";
 @import "reset";
 @import "png-sprite";
-@import "_mixins/svg-icons";
 .site-header {
   &--top-line {
     height: 63px;
-    background-color: #eceef4;
+    background-color: $light-color;
     &::after {
       content: "";
       display: block;
@@ -22,7 +21,7 @@
           font-size: 0;
           li {
             display: inline-block;
-            background-color: #ffffff;
+            background-color: $white-color;
             background-position: 8px;
             transition: background ease-out 0.2s;
             border-radius: 3px;
@@ -30,10 +29,10 @@
               &:nth-child(1) {
                 background-color: $accent-color;
                 a {
-                  color: #ffffff;
+                  color: $white-color;
                   .icon {
                     svg {
-                      fill: #fff;
+                      fill: $white-color;
                     }
                   }
                 }
@@ -41,10 +40,10 @@
               &:nth-child(2) {
                 background-color: $accent-color;
                 a {
-                  color: #ffffff;
+                  color: $white-color;
                   .icon {
                     svg {
-                      fill: #fff;
+                      fill: $white-color;
                     }
                   }
                 }
@@ -52,10 +51,10 @@
               &:nth-child(3) {
                 background-color: $accent-color;
                 a {
-                  color: #ffffff;
+                  color: $white-color;
                   .icon {
                     svg {
-                      fill: #fff;
+                      fill: $white-color;
                     }
                   }
                 }
@@ -63,10 +62,10 @@
               &:nth-child(4) {
                 background-color: $accent-color;
                 a {
-                  color: #ffffff;
+                  color: $white-color;
                   .icon {
                     svg {
-                      fill: #fff;
+                      fill: $white-color;
                     }
                   }
                 }
@@ -217,6 +216,49 @@
         }
       }
       .content-wrapper--contacts-links {
+        .contants-links--tooltip {
+          .tooltip--message {
+            font-size: 16px;
+            font-weight: 300;
+            color: $font-color;
+            line-height: 3;
+          }
+          transition: 0.2s all ease-out;
+          text-align: center;
+          visibility: hidden;
+          width: 227px;
+          height: 51px;
+          position: absolute;
+          background: #fff;
+          border: 2px solid #d4d4d5;
+          left: -58px;
+          top: -50px;
+          border-radius: 3px;
+          opacity: 0;
+          &:after,
+          &:before {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+          }
+          &:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-top-color: #fff;
+            border-width: 10px;
+            margin-left: -10px;
+          }
+          &:before {
+            border-color: rgba(245, 0, 0, 0);
+            border-top-color: #d4d4d5;
+            border-width: 13px;
+            margin-left: -13px;
+          }
+        }
         padding-top: 65px;
         ul {
           list-style-type: none;
@@ -228,6 +270,12 @@
             padding-left: 40px;
             position: relative;
             &:hover {
+              .contants-links--tooltip {
+                visibility: inherit;
+                top: -70px;
+                opacity: 1;
+                transition: 0.2s all ease-out;
+              }
               a {
                 .icon {
                   svg {
@@ -256,11 +304,6 @@
                   }
                 }
               }
-              &:hover {
-                a {
-                  @include icon(phone-h);
-                }
-              }
             }
             &:nth-child(2) {
               padding-left: 45px;
@@ -273,22 +316,12 @@
                   top: 1px;
                 }
               }
-              &:hover {
-                a {
-                  @include icon(nav-h);
-                }
-              }
             }
             &:nth-child(3) {
               a {
                 .icon {
                   right: 1px;
                   top: 3px;
-                }
-              }
-              &:hover {
-                a {
-                  @include icon(mail-h);
                 }
               }
             }
@@ -310,8 +343,8 @@
   }
   &--bottom-line {
     height: 86px;
-    border-top: 1px solid #eceef4;
-    border-bottom: 1px solid #eceef4;
+    border-top: 1px solid $light-color;
+    border-bottom: 1px solid $light-color;
     margin-top: 56px;
     .bottom-line--content-wrapper {
       .content-wrapper--site-navigation {
@@ -326,7 +359,7 @@
             position: relative;
             text-align: center;
             &:not(:last-child) {
-              border-right: 1px solid #eceef4
+              border-right: 1px solid $light-color
             }
             &:nth-child(1) {
               text-transform: uppercase;
@@ -412,7 +445,7 @@
           margin-right: 5px;
           background-color: transparent;
           &:focus {
-            background-color: darken(#fff, 2%);
+            background-color: darken($white-color, 2%);
           }
         }
       }
@@ -434,7 +467,7 @@
           display: inline-block;
           position: relative;
           z-index: 0;
-          color: #ffffff;
+          color: $white-color;
           font-weight: 700;
           font-size: 58px;
           text-transform: uppercase;
@@ -453,7 +486,7 @@
         .title-wrapper--title-description {
           font-size: 45px;
           font-weight: 300;
-          color: #ffffff;
+          color: $white-color;
           margin-top: -63px;
           margin-left: 105px;
         }
@@ -475,7 +508,7 @@
               }
               .like-wrapper--like-button {
                 .like-button--like-text {
-                  color: #fff;
+                  color: $white-color;
                 }
               }
             }
@@ -542,7 +575,8 @@
 }
 
 .about-section {
-  @include icon(divide);
+  background-image: url("../img/icons/svg/divide.svg");
+  background-repeat: no-repeat;
   &::after {
     content: "";
     display: block;
@@ -813,8 +847,8 @@
             margin-right: 14px;
             transition: 0.2s background ease-out;
             &:hover {
-              background-color: #ffffff;
-              border: 2px solid #ffffff;
+              background-color: $white-color;
+              border: 2px solid $white-color;
               a {
                 color: #000000;
               }
@@ -892,7 +926,7 @@
           .project-block--inner-wrapper {
             width: 278px;
             height: 284px;
-            background-color: #ffffff;
+            background-color: $white-color;
             border-radius: 5px;
             padding-top: 16px;
             .inner-wrapper--image-wrapper {
@@ -1168,16 +1202,6 @@
       }
     }
   }
-}
-
-svg.icon {
-  fill: red;
-  width: 10px;
-  height: 10px;
-}
-
-svg[xmlns] {
-  display: block;
 }
 
 @import "media";
