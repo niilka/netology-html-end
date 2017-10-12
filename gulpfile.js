@@ -84,6 +84,7 @@ gulp.task('build', ['removedist', 'imagemin', 'pug', 'sass', 'js'], function () 
 
 gulp.task('js', function () {
 	return gulp.src([
+			'app/libs/svg4everybody.min.js',
 			'app/js/common.js',
 		])
 		.pipe(concat('scripts.min.js'))
