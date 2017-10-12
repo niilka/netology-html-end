@@ -439,10 +439,10 @@
         .search-box--search-field {
           border: none;
           outline: none;
-          line-height: 84px;
           font-size: 15px;
           font-weight: 300;
           margin-right: 5px;
+          height: 84px;
           background-color: transparent;
           &:focus {
             background-color: darken($white-color, 2%);
@@ -1107,12 +1107,16 @@
             color: $font-color;
             padding-left: 84px;
             letter-spacing: 0.2px;
-            width: 70%;
+            width: 100%;
+            position: relative;
             &:focus {
               outline: 1px solid #646769;
             }
           }
           .field-wrapper--join-button {
+            position: absolute;
+            right: 0;
+            top: 0;
             color: $font-color;
             text-decoration: none;
             font-weight: 700;
