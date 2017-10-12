@@ -14,7 +14,7 @@
   }
 }
 
-.portfolio-wrapper--project-block {
+.projects-grid--project-block {
   width: 25%;
 }
 
@@ -25,7 +25,7 @@
 /* Large Devices, Wide Screens */
 
 @media only screen and (max-width: 1200px) {
-  .portfolio-wrapper--project-block {
+  .projects-grid--project-block {
     width: 33.33%;
     padding-left: 0!important;
   }
@@ -41,7 +41,7 @@
   .field-wrapper--email-field {
     font-size: 12px !important;
   }
-  .portfolio-wrapper--project-block {
+  .projects-grid--project-block {
     width: 50%;
   }
   .portfolio-section {
@@ -127,7 +127,7 @@
     margin-right: 50px;
     margin-left: 50px!important;
   }
-  .portfolio-wrapper--project-block {
+  .projects-grid--project-block {
     width: 100%;
   }
   .portfolio-wrapper--selection-menu {

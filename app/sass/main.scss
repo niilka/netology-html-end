@@ -598,7 +598,7 @@
       word-spacing: 3.6px;
       text-align: justify;
     }
-    .article-wrapper--left-column {
+    .articles-wrapper--left-column {
       text-align: left;
       position: relative;
       .left-column--background-icon {
@@ -614,7 +614,7 @@
         padding-top: 13px;
       }
     }
-    .article-wrapper--right-column {
+    .articles-wrapper--right-column {
       position: relative;
       .right-column--background-icon {
         width: 106px;
@@ -703,6 +703,7 @@
         background-color: #eaeced;
       }
       .features-left--feature-block {
+        display: inline-block;
         position: relative;
         &:nth-child(1) {
           .feature-block--backgroind-icon {
@@ -736,6 +737,7 @@
     }
     .features-grid--features-right {
       .features-right--feature-block {
+        display: inline-block;
         position: relative;
         &:nth-child(1) {
           .feature-block--backgroind-icon {
@@ -801,7 +803,7 @@
     height: 800px;
   }
   .portfolio-section--section-content {
-    .portfolio-section--portfolio-wrapper {
+    .section-content--portfolio-wrapper {
       text-align: center;
       .portfolio-wrapper--title-wrapper {
         display: inline-block;
@@ -901,7 +903,7 @@
           display: block;
           clear: both;
         }
-        .portfolio-wrapper--project-block {
+        .projects-grid--project-block {
           float: left;
           padding-bottom: 18px;
           text-align: center;
@@ -1132,6 +1134,7 @@
             transition: 0.2s background ease-out;
             &:hover {
               background-color: lighten(#494c4d, 2%);
+              cursor: pointer;
             }
           }
         }
