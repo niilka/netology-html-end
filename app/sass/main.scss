@@ -455,7 +455,8 @@
     background-image: url("../img/background.png");
     height: 885px;
     position: relative;
-    background-position: -50px;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat; //background-size: 100vw;
     z-index: 1;
     .hero-wrapper--hero-content {
