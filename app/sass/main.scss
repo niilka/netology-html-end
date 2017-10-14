@@ -429,7 +429,6 @@
         float: right;
         height: 86px;
         padding-left: 40px;
-        display: inline-block;
         position: relative;
         .icon {
           position: absolute;
@@ -731,8 +730,6 @@
         }
         .feature-block--title-wrapper {
           padding-left: 116px;
-          .title-wrapper--main-title {}
-          .title-wrapper--title-description {}
         }
       }
     }
@@ -765,8 +762,6 @@
         }
         .feature-block--title-wrapper {
           padding-left: 193px;
-          .title-wrapper--main-title {}
-          .title-wrapper--title-description {}
         }
       }
     }
@@ -1130,7 +1125,6 @@
             float: right;
             padding: 14px 24px;
             margin-right: 9px;
-            display: inline-block;
             margin-top: 11px;
             transition: 0.2s background ease-out;
             &:hover {
@@ -1202,9 +1196,9 @@
             a {
               text-decoration: none;
               color: $font-color;
-              font-size: 13px;
               position: relative;
               transition: 0.2s color ease-out;
+              font-size: 13px;
             }
           }
         }
@@ -1213,4 +1207,5 @@
   }
 }
 
+@import "grid";
 @import "media";
